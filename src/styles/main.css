@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Quicksand", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+.header {
+  border-bottom: 1px solid #e2e8f0;
+  /* margin-top:100px; */
+  background-color: #fff;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  margin: 10px 0;
+}
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #475569;
+}
+
+.nav-link:hover {
+  color: #482ff7;
+}
+
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #482ff7;
+}
+.navbar h3 a {
+  font-weight: 700;
+  color: #0a1931;
+}
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* CONTAINER */
+.container {
+  /* display: inherit; */
+  max-width: 1170px;
+  margin: auto;
+  padding: 5px 10px;
+}
+
+/* JUMBOTRON */
+.jumbotron {
+  /* margin: 15px 10px 0px 10px; */
+  border-radius: 10px;
+  background: linear-gradient(rgba(0, 0, 250, 0.25), rgba(125, 250, 250, 0.45)),
+    url(/images/heros/hero-image_4.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white !important;
+  height: 450px;
+}
+.jumbotron-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heading-jumbotron {
+  font-weight: 700;
+  font-size: 3em;
+  color: #053742;
+  text-shadow: 2px 2px #e8f0f2;
+}
+/* .page-scroll {
+  height: 5000px;
+} */
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+.column .card .card-img {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 15px;
+  margin-top: -15px;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* RESPONSIVE */
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* IMG CARD */
+.img-thumbnails {
+  border-radius: 5px;
+}
+
+.description {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+h2 {
+  font-weight: 700;
+  font-size: 3em;
+  line-height: 1.8;
+  text-align: center;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 1em;
+  display: block;
+  width: max-content;
+}
+
+.h2_wrapper {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+
+@media screen and (max-width: 456px) {
+  h2 {
+    width: auto;
+    text-align: left;
+  }
+}
+
+/* Footer */
+.footer {
+  margin-top: 10px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a1931;
+  color: #fff;
+}
+.footer p {
+  font-size: 1.3em;
+}
+.footer a {
+  text-decoration: underline dotted;
+  color: #fff;
+}
